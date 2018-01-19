@@ -1,0 +1,23 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    America/Los_Angeles # Set the timezone
+
+  # Version of xcode to use
+  xcode:
+    version:
+      9.2.0
+
+## Customize checkout
+
+## Customize dependencies
+dependencies:
+  pre:
+    - ./Scripts/build.sh
+  
+  # we automatically cache and restore many dependencies between
+  # builds. If you need to, you can add custom paths to cache:
+  cache_directories:
+    - "Carthage"   # relative to the build directory
+    - "Inspector/node_modules" 
